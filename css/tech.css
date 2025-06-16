@@ -17,9 +17,11 @@
 }
 
 .tech-grid {
-    display: inline-flex;
-    gap: 2rem;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 120px);
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
 }
 
 .tech-category {

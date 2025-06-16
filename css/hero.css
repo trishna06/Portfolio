@@ -1,8 +1,42 @@
-/* style.css */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(15, 15, 15, 0.6); /* dark with opacity */
+  backdrop-filter: blur(10px); /* blur the content behind it */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.nav-bar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: #4ea8ff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body, html {
@@ -101,4 +135,10 @@ body, html {
 
 .hero h1, .hero h3 {
   animation: fadeUp 1.5s ease forwards;
+}
+
+@media (min-width: 768px) {
+  .content h1 br {
+    display: none;
+  }
 }
