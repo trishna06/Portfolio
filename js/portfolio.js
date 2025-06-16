@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const githubLink = document.getElementById("github-link");
-const linkedinLink = document.getElementById("linkedin-link");
-const resumeLink = document.getElementById("resume-link");
+document.getElementById("github-link").addEventListener("click", function () {
+  window.open("https://github.com/trishna06", "_blank");
+});
 
-githubLink.href = "https://github.com/trishna06";
-linkedinLink.href = "https://www.linkedin.com/in/trishna-pattanaik-a50970123/";
-resumeLink.href = "trishna-resume.pdf";
+document.getElementById("linkedin-link").addEventListener("click", function () {
+  window.open("https://www.linkedin.com/in/trishna-pattanaik-a50970123/", "_blank");
+});
 
-githubLink.target = "_blank";
-linkedinLink.target = "_blank";
-resumeLink.target = "_blank";
+document.getElementById("resume-link").addEventListener("click", function () {
+  window.open("trishna-resume.pdf", "_blank");
+});
