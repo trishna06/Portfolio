@@ -1,0 +1,27 @@
+.icon-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.icon-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll-left 10s linear infinite;
+}
+
+.icon-track img {
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
