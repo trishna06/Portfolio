@@ -31,8 +31,8 @@
     margin-bottom: 1rem;
     color: #00b6ff;
     text-align: left;
-    border-left: 4px solid #00b6ff;
     padding-left: 0.75rem;
+    text-align: center;
 }
 
 .tech-item {
