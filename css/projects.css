@@ -1,7 +1,12 @@
 .projects {
   padding: 4rem 2rem;
   background-color: #0f0f0f;
-  color: #fff;
+  color: #fff;background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)),
+        url('../images/Hero.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .projects-container {
