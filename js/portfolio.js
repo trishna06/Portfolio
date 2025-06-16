@@ -69,3 +69,22 @@ document.getElementById("linkedin-link").addEventListener("click", function () {
 document.getElementById("resume-link").addEventListener("click", function () {
   window.open("trishna-resume.pdf", "_blank");
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const target = document.getElementById("side-note");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add 5s delay before showing text
+        setTimeout(() => {
+          target.classList.add("show-text");
+        }, 1000);
+        observer.unobserve(entry.target); // Run once
+      }
+    });
+  }, { threshold: 0.5 }); // Trigger when 50% in view
+
+  observer.observe(target);
+});

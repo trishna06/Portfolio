@@ -66,18 +66,12 @@
   font-size: 1rem;
   color: #ccc;
   font-style: italic;
-  opacity: 0.8;
-  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Optional: animate it in */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 0.8;
-    transform: translateY(0);
-  }
+.show-text {
+  opacity: 1;
+  transform: translateY(0);
 }
