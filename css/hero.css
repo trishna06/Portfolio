@@ -137,3 +137,13 @@ html {
   transition: background-color 0.3s ease, transform 0.1s ease;
   z-index: 10000;
 }
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+
+  body {
+    cursor: auto !important;
+  }
+}
