@@ -39,6 +39,15 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 body, html {
   height: 100%;
   overflow-x: hidden;
@@ -125,10 +134,10 @@ body, html {
 /* Responsive */
 @media (max-width: 600px) {
   .content h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .content h2 {
+  .content h3 {
     font-size: 1.2rem;
   }
 }
