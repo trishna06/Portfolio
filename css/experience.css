@@ -1,0 +1,87 @@
+.experience-section {
+  padding: 5rem 2rem;
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.experience-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #4ea8ff;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.05);
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.experience-years {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.tech-used {
+  color: #90caf9;
+  margin-top: 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.experience-list {
+    padding-left: 1rem;
+}

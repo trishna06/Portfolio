@@ -25,25 +25,34 @@
 
   <link rel="icon" href="./images/icons/favicon.ico" type="image/x-icon">
   <title>Trishna Pattanaik | SDE</title>
+  <link rel="stylesheet" href="./css/navbar.css" />
   <link rel="stylesheet" href="./css/hero.css" />
   <link rel="stylesheet" href="./css/about.css" />
   <link rel="stylesheet" href="./css/projects.css" />
   <link rel="stylesheet" href="./css/tech.css" />
+  <link rel="stylesheet" href="./css/experience.css" />
   <link rel="stylesheet" href="./css/footer.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="site-header">
-  <nav class="nav-bar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#tech">Tech</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="nav-bar">
+      <div class="brand">Trishna</div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#tech">Tech Stack</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <section class="hero">
     <div class="content">
       <h1>
@@ -144,7 +153,8 @@
               Text</span></div>
           <div class="tech-item"><img src="./images/icons/jupyter-logo.png" alt="Jupyter" /><span>Jupyter</span></div>
           <div class="tech-item"><img src="./images/icons/github-logo.png" alt="GitHub" /><span>GitHub</span></div>
-          <div class="tech-item"><img src="./images/icons/databricks-logo.png" alt="Databricks" /><span>Databricks</span>
+          <div class="tech-item"><img src="./images/icons/databricks-logo.png"
+              alt="Databricks" /><span>Databricks</span>
           </div>
           <div class="tech-item"><img src="./images/icons/zap-logo.png" alt="Owasp Zap" /><span>Owasp Zap</span></div>
         </div>
@@ -187,6 +197,104 @@
     </div>
   </section>
 
+  <section id="experience" class="experience-section">
+    <h2>Experience</h2>
+    <div class="experience-timeline">
+
+      <!-- Experience 1 -->
+      <div class="experience-card">
+        <img src="./images/icons/arcstone-logo.png" alt="Arcstone" class="company-logo" />
+        <div class="experience-content">
+          <div class="experience-header">
+            <h3>Arcstone Pte. Ltd. (Singapore)</h3>
+            <span class="experience-years">Oct 2019 – Present</span>
+          </div>
+          <p><strong>Role:</strong> Lead Sofwatre Engineer</p>
+          <p>
+          <strong>Responsibilites:</strong> 
+          <ul class="experience-list">
+            <li>
+              Led end-to-end development and architecture of enterprise-level applications using .NET Framework (C#, VB.NET), .NET Core (C#, MVC), and modern JavaScript frameworks such as Angular and ReactJS.
+            </li>
+            <li>
+              Designed and implemented scalable solutions to support modular development and efficient deployment strategies.
+            </li>
+            <li>
+              Acted as a full stack developer across multiple projects
+            </li>
+            <li>
+              Mentored junior developers, performed code reviews, and ensured adherence to coding standards and best practices. Collaborated with cross-functional teams including QA, DevOps, and Product Management to deliver high quality features on time.
+            </li>
+            <li>
+              Experienced in continuous integration and deployment (CI/CD) practices and cloud-readiness for key solutions.
+            </li>
+          </ul>
+          <strong>Project Highlights:</strong>
+          <ul class="experience-list">
+            <li>
+              arc.lite / arc.ops – Delivered a lightweight, advanced MES (Manufacturing Execution System) platform tailored for operational agility and efficiency.
+            </li>
+            <li>
+              E-Forms – Developed a dynamic form builder platform to empower users to design, configure, and deploy electronic forms without code.
+            </li>
+            <li>
+              Smart Factory (Client) – Engineered a cloud/on-premise MES solution enabling real-time production monitoring, data analytics, and workflow automation for smart manufacturing setups.
+            </li>
+          </ul>
+          </p>
+          <p class="tech-used"><strong>Tech Used:</strong> .NET Core, Angular, ReatcJS, MSSQL, RabbitMQ, SignalR Azure Devops</p>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="experience-card">
+        <img src="./images/icons//stellar-logo.png" alt="Stellar" class="company-logo" style="padding: 2px;" />
+        <div class="experience-content">
+          <div class="experience-header">
+            <h3>Stellar Data Solution Pvt. Ltd. (India)</h3>
+            <span class="experience-years">Oct 2017 – Sep 2019</span>
+          </div>
+          <p><strong>Role:</strong> Software Developer</p>
+          <p>
+          <strong>Responsibilites:</strong> 
+          <ul class="experience-list">
+            <li>
+              Worked as a full stack developer, contributing to the development and maintenance of web applications using .NET Framework (C#), .NET Core (C#, MVC), and AngularJS.
+            </li>
+            <li>
+              Developed and consumed RESTful APIs, implemented business logic, and ensured seamless integration between front-end and back-end components.
+            </li>
+            <li>
+              Participated in all phases of the software development lifecycle, including requirement analysis, design, coding, testing, and deployment.
+            </li>
+            <li>
+              Collaborated with UI/UX teams to enhance user experience and ensure responsive, cross-browser compatible web interfaces.
+            </li>
+            <li>
+              Actively contributed to sprint planning, daily stand-ups, and agile delivery processes, ensuring timely feature completion and release.
+            </li>
+          </ul>
+          <strong>Project Highlights:</strong>
+          <ul class="experience-list">
+            <li>
+              Banner Health – Built and maintained a healthcare appointment booking platform, enabling streamlined patient scheduling and management.
+            </li>
+            <li>
+              Khadamat – Developed a feature-rich e-commerce application supporting product browsing, secure checkout, and user account management.
+            </li>
+            <li>
+              CampusLive – Contributed to a comprehensive school management system offering modules for attendance, grade tracking, communication, and scheduling.
+            </li>
+          </ul>
+          </p>
+          <p class="tech-used"><strong>Tech Used:</strong> ASP.NET, AngularJS, MSSQL</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
   <section class="contact" id="contact">
     <div class="contact-container scroll-animate">
       <h2>Contact Me</h2>
@@ -209,6 +317,7 @@
   <footer class="footer">
     <p>&copy; 2025 Trishna Pattanaik. All rights reserved.</p>
   </footer>
+  <div class="custom-cursor"></div>
   <script src="./js/portfolio.js" type="text/javascript"></script>
 </body>
 

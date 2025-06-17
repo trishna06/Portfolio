@@ -1,5 +1,12 @@
+const toggleBtn = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+toggleBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 /**
- * update experience dynamically
+* update experience dynamically
 */
 function updateExperience(startYear, startMonth) {
   const now = new Date();
@@ -88,3 +95,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(target);
 });
+
+
+/** custom cursor */
+const cursor = document.querySelector(".custom-cursor");
+
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+const speed = 0.2; // lower = slower
+
+function animateCursor() {
+  cursorX += (mouseX - cursorX) * speed;
+  cursorY += (mouseY - cursorY) * speed;
+  cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+  requestAnimationFrame(animateCursor);
+}
+
+window.addEventListener("mousemove", e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+animateCursor();
