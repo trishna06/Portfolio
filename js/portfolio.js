@@ -120,24 +120,32 @@ window.addEventListener("mousemove", e => {
 animateCursor();
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".experience-card");
+ const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // Stop observing once animated
+  accordionHeaders.forEach(header => {
+    header.addEventListener("click", () => {
+      const item = header.parentElement;
+      const content = item.querySelector(".accordion-content");
+
+      // Collapse all
+      document.querySelectorAll(".accordion-content").forEach(c => {
+        if (c !== content) {
+          c.style.maxHeight = null;
+          c.classList.remove("open");
+          c.parentElement.querySelector(".accordion-header").classList.remove("active");
         }
       });
-    },
-    {
-      root: null,
-      threshold: 0.2, // Trigger when 20% visible
-    }
-  );
 
-  cards.forEach(card => observer.observe(card));
-});
-
+      // Toggle current
+      const isOpen = content.classList.contains("open");
+      if (isOpen) {
+        content.style.maxHeight = null;
+        content.classList.remove("open");
+        header.classList.remove("active");
+      } else {
+        content.style.maxHeight = content.scrollHeight + 20 + "px";
+        content.classList.add("open");
+        header.classList.add("active");
+      }
+    });
+  });

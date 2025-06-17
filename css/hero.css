@@ -63,8 +63,7 @@ html {
 
 
 .content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
 }
 
 .content span {
@@ -76,11 +75,6 @@ html {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: #cccccc;
-}
-
-.content p {
-  margin-bottom: 2rem;
-  color: #aaa;
 }
 
 /* Animation */
@@ -114,13 +108,13 @@ html {
     font-size: 1.8rem;
   }
 
-  .content h3 {
+  .content h2 {
     font-size: 1.2rem;
   }
 }
 
 .hero h1,
-.hero h3 {
+.hero h2 {
   animation: fadeUp 1.5s ease forwards;
 }
 
