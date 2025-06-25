@@ -21,7 +21,6 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  max-width: 1000px;
   margin: 0 auto;
   flex-wrap: wrap;
 }

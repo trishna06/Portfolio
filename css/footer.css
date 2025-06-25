@@ -32,15 +32,23 @@
 .contact-btn {
   padding: 0.75rem 1.5rem;
   border: 1px solid #00b6ff;
-  color: #00b6ff;
+  color: #fff;
   text-decoration: none;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  background-color: #00b6ff;
+  transition: transform 0.3s ease;
 }
 
 .contact-btn:hover {
   background-color: #00b6ff;
-  color: #181818;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.icon-link {
+  background-color: transparent;
+  border: none;
 }
 
 .icon-link img {
@@ -51,17 +59,6 @@
 
 .icon-link:hover img {
   transform: scale(1.1);
-}
-
-.icon-bg {
-  background-color: #fff; /* or #00ffcc for cyan */
-  border-radius: 50%;
-  padding: 8px;
-  display: inline-block;
-}
-.icon-bg img {
-  width: 24px;
-  height: 24px;
 }
 
 .footer {
