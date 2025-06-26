@@ -49,6 +49,7 @@
   height: 70px;
   border-radius: 6px;
   background: #fff;
+  cursor: pointer;
 }
 
 .accordion-header .company-logo img {

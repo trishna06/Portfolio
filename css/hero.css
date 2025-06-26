@@ -51,7 +51,6 @@ html {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  /* Dark overlay */
   z-index: 1;
 }
 
@@ -61,20 +60,32 @@ html {
   padding: 1rem;
 }
 
+/* Hide hero h1 and h2 text by default */
+.hero .content h1, .hero .content h2 {
+  color: transparent;
+}
+
+.hero .content h1 .hero-name .hero-letter {
+  color: #00b6ff;
+}
+
+/* Show animated letters */
+.hero .content h1 .hero-letter,
+.hero .content h2 .hero-letter {
+  color: #fff;
+}
+
+/* When animated, opacity is set inline by JS */
 
 .content h1 {
   font-size: 3.5rem;
-}
-
-.content span {
-  color: #00b6ff;
 }
 
 .content h2 {
   font-weight: 300;
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  color: #cccccc;
+  color: transparent;
 }
 
 /* Animation */
@@ -113,11 +124,6 @@ html {
   }
 }
 
-.hero h1,
-.hero h2 {
-  animation: fadeUp 1.5s ease forwards;
-}
-
 @media (min-width: 768px) {
   .content h1 br {
     display: none;
@@ -146,4 +152,9 @@ html {
   body {
     cursor: auto !important;
   }
+}
+
+.scroll-down-icon {
+  width: 100px;
+  filter: invert(48%) sepia(99%) saturate(7472%) hue-rotate(176deg) brightness(102%) contrast(101%);
 }

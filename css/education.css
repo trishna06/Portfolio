@@ -1,0 +1,118 @@
+.education-section {
+    padding: 5rem 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    background-image: 
+    linear-gradient(rgba(18, 18, 18, 0.95), rgba(18, 18, 18, 0.95)),
+    url('../images/education-bg.avif'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  }
+  
+  .education-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4ea8ff;
+    margin-bottom: 3rem;
+  }
+  
+  .education-cards {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .edu-card {
+    background: rgb(23 23 23);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    position: sticky;
+    top: 6rem;
+    transform: scale(0.98);
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+    width: 50vw;
+  }
+  
+  .edu-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .edu-card .edu-date {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .edu-card .edu-degree {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .edu-card .edu-degree-logo {
+    width: 30px;
+    height: auto;
+    background: transparent;
+    left: 5%;
+    top: 8%;
+  }
+
+  .edu-card .edu-course {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .edu-card .edu-grade {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Stacking effect: each card gets a higher z-index as we go down */
+  .education-cards .edu-card:nth-child(1) { z-index: 1; }
+  .education-cards .edu-card:nth-child(2) { z-index: 2; }
+  .education-cards .edu-card:nth-child(3) { z-index: 3; }
+  
+  @media (max-width: 768px) {
+    .edu-card {
+      position: static;
+      transform: none;
+    }
+  }
+
+  .education-list {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+
+  .edu-logo {
+    width: 200px;
+    height: auto;
+    background: transparent;
+    position: fixed;
+    right: 5%;
+    top: 8%;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .edu-logo {
+      display: none;
+    }
+
+    .edu-card {
+      width: 100%;
+    }
+  }

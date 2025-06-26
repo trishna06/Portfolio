@@ -25,13 +25,14 @@
 
   <link rel="icon" href="./images/icons/favicon.ico" type="image/x-icon">
   <title>Trishna Pattanaik | SDE</title>
-  <link rel="stylesheet" href="./css/navbar.css" />
-  <link rel="stylesheet" href="./css/hero.css" />
-  <link rel="stylesheet" href="./css/about.css" />
-  <link rel="stylesheet" href="./css/projects.css" />
-  <link rel="stylesheet" href="./css/tech.css" />
-  <link rel="stylesheet" href="./css/experience.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/navbar.css?v=1.0.0" />
+  <link rel="stylesheet" href="./css/hero.css?v=1.0.0" />
+  <link rel="stylesheet" href="./css/about.css?v=1.0.0" />
+  <link rel="stylesheet" href="./css/projects.css?v=1.0.0" />
+  <link rel="stylesheet" href="./css/tech.css?v=1.0.0" />
+  <link rel="stylesheet" href="./css/experience.css?v=1.0.0" />
+  <link rel="stylesheet" href="./css/footer.css?v=1.0.0" />
+  <link rel="stylesheet" href="./css/education.css?v=1.0.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -49,6 +50,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#tech">Tech Stack</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -57,9 +59,11 @@
     <div class="content">
       <h1>
         Hi!<br />
-        I'm <span>Trishna Pattanaik</span>.
+        I'm <span class="hero-name">Trishna Pattanaik</span>.
       </h1>
       <h2>Software Development Engineer</h2>
+      <br>
+      <img src="./images/icons/arrow-down.webp" alt="Scroll Down" class="scroll-down-icon" />
     </div>
   </section>
   <section class="about" id="about">
@@ -206,7 +210,7 @@
         <button class="accordion-header">
           <div class="company-info">
             <div class="company-logo">
-              <img src="./images/icons/arcstone-logo.png" alt="Arcstone" />
+              <img id="arcstone-logo" src="./images/icons/arcstone-logo.png" alt="Arcstone" />
             </div>
             <div>
               <span class="company-name">Arcstone Pte. Ltd.</span>
@@ -267,7 +271,7 @@
         <button class="accordion-header">
           <div class="company-info">
             <div class="company-logo stellar-padding">
-              <img src="./images/icons/stellar-logo.png" alt="Stellar" />
+              <img id="stellar-logo" src="./images/icons/stellar-logo.png" alt="Stellar" />
             </div>
             <div>
               <span class="company-name">Stellar Data Solution Pvt. Ltd.</span>
@@ -332,6 +336,59 @@
     </div>
   </section>
 
+  <section id="education" class="education-section">
+    <h2>Education</h2>
+    <div class="education-cards">
+  
+      <div class="edu-card">
+        <h3>Biju Patnaik University of Technology, Rourkela (India)</h3>
+        <img id="bput-logo" src="./images/icons/bput-logo.png" alt="BPUT Logo" class="edu-logo" />        
+        <p class="edu-degree">
+          <img id="graduate-logo" src="./images/icons/graduate-logo.png" alt="Degree Logo" class="edu-degree-logo" />
+          Bachelor of Technology
+        </p>
+        <span class="edu-date">2013 – 2017 | Full Time</span>
+        <p class="edu-course">Computer Science and Engineering</p>
+        <p class="edu-grade"><strong>Grade:</strong> 7.9 GPA</p>
+        <p>
+          <strong>Course Highlight:</strong>
+          <ul class="education-list">
+            <li>Object-Oriented Programming in Java</li>
+            <li>Programming with C and C++</li>
+            <li>Operating Systems</li>
+            <li>Database Management Systems</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Computer Networks</li>
+          </ul>
+        </p>
+      </div>
+  
+      <div class="edu-card">
+        <h3>Birla Institute of Technology and Science, Pilani (India)</h3>
+        <img id="bits-logo" src="./images/icons/bits-logo.png" alt="BITS Logo" class="edu-logo" />
+        <p class="edu-degree">
+          <img id="graduate-logo" src="./images/icons/graduate-logo.png" alt="Degree Logo" class="edu-degree-logo" />
+          Master of Technology
+        </p>
+        <span class="edu-date">2024 – Present | Part Time</span>
+        <p class="edu-course">Cloud Computing</p>
+        <p class="edu-grade"><strong>Grade:</strong> 7 GPA</p>
+        <p>
+          <strong>Course Highlight:</strong>
+          <ul class="education-list">
+            <li>Distributed Systems & Cloud Architecture</li>
+            <li>Virtualization and Containerization (Docker, Kubernetes)</li>
+            <li>Cloud Native Application Development</li>
+            <li>Microservices & DevOps Practices</li>
+            <li>Cloud Security and Identity Management</li>
+            <li>AWS, Azure, and GCP Services</li>
+          </ul>
+        </p>
+      </div>
+  
+    </div>
+  </section>
+
 
   <section class="contact" id="contact">
     <div class="contact-container scroll-animate">
@@ -356,7 +413,7 @@
     <p>&copy; 2025 Trishna Pattanaik. All rights reserved.</p>
   </footer>
   <div class="custom-cursor"></div>
-  <script src="./js/portfolio.js" type="text/javascript"></script>
+  <script src="./js/portfolio.js?v=1.0.0" type="text/javascript"></script>
 </body>
 
 </html>

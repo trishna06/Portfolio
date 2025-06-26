@@ -150,7 +150,9 @@ accordionHeaders.forEach(header => {
   });
 });
 
-const cards = document.querySelectorAll(".experience-card");
+accordionHeaders[0].click();
+
+const cards = document.querySelectorAll(".accordion-item");
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
@@ -165,4 +167,147 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 cards.forEach(card => {
   observer.observe(card);
+});
+
+
+document.getElementById("bput-logo").addEventListener("click", function () {
+  window.open("https://bput.ac.in/", "_blank");
+});
+
+document.getElementById("bits-logo").addEventListener("click", function () {
+  window.open("https://www.bits-pilani.ac.in/", "_blank");
+});
+
+document.getElementById("arcstone-logo").addEventListener("click", function () {
+  window.open("https://www.arcstone.co/", "_blank");
+});
+
+document.getElementById("stellar-logo").addEventListener("click", function () {
+  window.open("https://stellarshell.com/", "_blank");
+});
+
+// Animate hero h1 text letter by letter
+function animateHeroTitle() {
+  const heroH1 = document.querySelector('.hero .content h1');
+  if (!heroH1) return;
+
+  // Get the original HTML and split into lines (to preserve <br> and <span>)
+  const lines = Array.from(heroH1.childNodes);
+  heroH1.innerHTML = '';
+
+  lines.forEach((node, lineIdx) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      // For plain text, split into letters
+      const text = node.textContent;
+      text.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.opacity = '0';
+        span.style.transition = 'opacity 0.3s';
+        span.classList.add('hero-letter');
+        heroH1.appendChild(span);
+      });
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'BR') {
+      heroH1.appendChild(document.createElement('br'));
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      // For elements like <span>, wrap each letter in a span and preserve classes
+      const text = node.textContent;
+      const wrapper = document.createElement(node.tagName);
+      // Copy all classes from the original node
+      wrapper.className = node.className;
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        span.textContent = text[i];
+        span.style.opacity = '0';
+        span.style.transition = 'opacity 0.3s';
+        span.classList.add('hero-letter');
+        wrapper.appendChild(span);
+      }
+      heroH1.appendChild(wrapper);
+    }
+  });
+
+  // Animate each letter
+  // Animate letters in both direct children and nested spans
+  const allSpans = heroH1.querySelectorAll('.hero-letter');
+  allSpans.forEach((span, i) => {
+    setTimeout(() => {
+      span.style.opacity = '1';
+    }, i * 60);
+  });
+}
+
+function animateHeroSubtitle() {
+  const heroH2 = document.querySelector('.hero .content h2');
+  heroH2.style.color = '#cccccc';
+  if (!heroH2) return;
+  const text = heroH2.textContent;
+  heroH2.innerHTML = '';
+  text.split('').forEach((char, i) => {
+    const span = document.createElement('span');
+    span.textContent = char;
+    span.style.opacity = '0';
+    span.style.transition = 'opacity 0.3s';
+    span.classList.add('hero-letter');
+    heroH2.appendChild(span);
+  });
+  const allSpans = heroH2.querySelectorAll('.hero-letter');
+  allSpans.forEach((span, i) => {
+    setTimeout(() => {
+      span.style.opacity = '1';
+    }, i * 60);
+  });
+}
+
+function animateHeroTitleAndSubtitle() {
+  animateHeroTitle();
+  // Wait for h1 animation to finish, then animate h2
+  const heroH1 = document.querySelector('.hero .content h1');
+  if (!heroH1) return;
+  const h1LetterCount = heroH1.querySelectorAll('.hero-letter').length;
+  setTimeout(() => {
+    animateHeroSubtitle();
+  }, h1LetterCount * 60 + 300); // 300ms buffer after h1
+}
+
+function startContinuousAnimation() {
+  animateHeroTitleAndSubtitle();
+  
+  // Calculate total animation duration
+  const heroH1 = document.querySelector('.hero .content h1');
+  const heroH2 = document.querySelector('.hero .content h2');
+  if (!heroH1 || !heroH2) return;
+  
+  const h1LetterCount = heroH1.querySelectorAll('.hero-letter').length;
+  const h2LetterCount = heroH2.querySelectorAll('.hero-letter').length;
+  const totalDuration = (h1LetterCount + h2LetterCount) * 60 + 3000; // 1000ms buffer
+  
+  // Restart animation after completion
+  setTimeout(() => {
+    // Reset text to original state
+    resetHeroText();
+    // Start animation again
+    startContinuousAnimation();
+  }, totalDuration);
+}
+
+function resetHeroText() {
+  const heroH1 = document.querySelector('.hero .content h1');
+  const heroH2 = document.querySelector('.hero .content h2');
+  
+  if (heroH1) {
+    heroH1.innerHTML = `
+      Hi!<br />
+      I'm <span class="hero-name">Trishna Pattanaik</span>.
+    `;
+  }
+  
+  if (heroH2) {
+    heroH2.innerHTML = 'Software Development Engineer';
+    heroH2.style.color = 'transparent';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  startContinuousAnimation();
 });
