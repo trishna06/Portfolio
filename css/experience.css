@@ -147,3 +147,14 @@
     align-items: center;
     margin-left: -12px;
 }
+
+.tech-used {
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #7a7a7a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 5px;
+}
